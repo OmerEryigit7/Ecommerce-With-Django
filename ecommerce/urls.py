@@ -7,6 +7,9 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('Product/',include('Product.urls')),
+    path('Blog/',include('Blog.urls')),
     path('',views.index,name="index"),
-    path('Product/',include('Product.urls'))
+    path('about/',views.about,name="about"),
+    path('contact/',views.contact,name="contact")
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

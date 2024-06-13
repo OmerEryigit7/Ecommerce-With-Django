@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load static %}
 
 
 {% block title %}Anasayfa{% endblock title %}
@@ -11,9 +12,9 @@
 					<div class="row justify-content-between">
 						<div class="col-lg-5">
 							<div class="intro-excerpt">
-								<h1>Modern Interior <span clsas="d-block">Design Studio</span></h1>
-								<p class="mb-4">Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique.</p>
-								<p><a href="" class="btn btn-secondary me-2">Shop Now</a><a href="#" class="btn btn-white-outline">Explore</a></p>
+								<h1>HOŞGELDİNİZ <span clsas="d-block">MKT-COM</span></h1>
+								<p class="lead fw-normal text-white-50 mb-4">Türkiye'nin En Hızlı Ve Yenilikçi Mobilya Tedarikcisi.</p>
+								<p><a href="" class="btn btn-secondary me-2">Alışveriş</a><a href="{% url 'about' %}" class="btn btn-white-outline">Hakkımızda</a></p>
 							</div>
 						</div>
 						<div class="col-lg-7">
@@ -33,9 +34,9 @@
 
 					<!-- Start Column 1 -->
 					<div class="col-md-12 col-lg-3 mb-5 mb-lg-0">
-						<h2 class="mb-4 section-title">Crafted with excellent material.</h2>
-						<p class="mb-4">Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique. </p>
-						<p><a href="shop.html" class="btn">Explore</a></p>
+						<h2 class="mb-4 section-title">En Popüler Ürünlerimiz</h2>
+						<p class="mb-4">Bunlar Ve Daha Fazla Ürünlerimizi Sitemizde Görebilirsiniz.</p>
+						<p><a href="shop.html" class="btn">Alışverişe Devam Edin</a></p>
 					</div> 
 					<!-- End Column 1 -->
 
@@ -91,8 +92,8 @@
 			<div class="container">
 				<div class="row justify-content-between">
 					<div class="col-lg-6">
-						<h2 class="section-title">Why Choose Us</h2>
-						<p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique.</p>
+						<h2 class="section-title">Neden Bizi Tercih Etmelisiniz?</h2>
+						<p>Alanımızdaki En Hızlı Ve Kaliteli Ürün Tedarikçisi Olarak Sizlere Destek Oluyoruz.</p>
 
 						<div class="row my-5">
 							<div class="col-6 col-md-6">
@@ -100,8 +101,8 @@
 									<div class="icon">
 										<img src="static/img/truck.svg" alt="Image" class="imf-fluid">
 									</div>
-									<h3>Fast &amp; Free Shipping</h3>
-									<p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
+									<h3>Hızlı Kargolama</h3>
+									<p>Ürünlerimizi Size En Hızlı Şekilde Teslim Ediyoruz.</p>
 								</div>
 							</div>
 
@@ -110,8 +111,8 @@
 									<div class="icon">
 										<img src="static/img/bag.svg" alt="Image" class="imf-fluid">
 									</div>
-									<h3>Easy to Shop</h3>
-									<p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
+									<h3>Kolay Alışveriş</h3>
+									<p>Sizleri Kullanıcı Dostu Arayüzümüzle Karşılıyoruz.</p>
 								</div>
 							</div>
 
@@ -120,8 +121,8 @@
 									<div class="icon">
 										<img src="static/img/support.svg" alt="Image" class="imf-fluid">
 									</div>
-									<h3>24/7 Support</h3>
-									<p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
+									<h3>Destek Ekibi</h3>
+									<p>Site Veya Ürünlerimizle İlgili Yaşadığınız Sorunda Destek Ekibimizle Yardımcı Oluyoruz.</p>
 								</div>
 							</div>
 
@@ -130,8 +131,8 @@
 									<div class="icon">
 										<img src="static/img/return.svg" alt="Image" class="imf-fluid">
 									</div>
-									<h3>Hassle Free Returns</h3>
-									<p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
+									<h3>Geri İade</h3>
+									<p>Ürünlerimizle İlgili Karşılaştığınız Herhangi Bir Hatada Geri İade Kabul Ediyoruz.</p>
 								</div>
 							</div>
 
@@ -159,8 +160,8 @@
 						</div>
 					</div>
 					<div class="col-lg-5 ps-lg-5">
-						<h2 class="section-title mb-4">We Help You Make Modern Interior Design</h2>
-						<p>Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique. Pellentesque habitant morbi tristique senectus et netus et malesuada</p>
+						<h2 class="section-title mb-4">Sizlere Dizayn Alanında Yardımcı Oluyoruz</h2>
+						<p>Sadece Kendi Ürünlerimiz Değil,Dizayn Ettiğiniz Ürünlerdede Size Yardımcı Oluyoruz.</p>
 
 						<ul class="list-unstyled custom-list my-4">
 							<li>Donec vitae odio quis nisl dapibus malesuada</li>
@@ -168,7 +169,7 @@
 							<li>Donec vitae odio quis nisl dapibus malesuada</li>
 							<li>Donec vitae odio quis nisl dapibus malesuada</li>
 						</ul>
-						<p><a herf="#" class="btn">Explore</a></p>
+						<p><a herf="#" class="btn">Keşfetmeye Devam Edin</a></p>
 					</div>
 				</div>
 			</div>
@@ -229,7 +230,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-7 mx-auto text-center">
-						<h2 class="section-title">Testimonials</h2>
+						<h2 class="section-title">Ekibimiz</h2>
 					</div>
 				</div>
 
@@ -327,10 +328,10 @@
 			<div class="container">
 				<div class="row mb-5">
 					<div class="col-md-6">
-						<h2 class="section-title">Recent Blog</h2>
+						<h2 class="section-title">Bloglar</h2>
 					</div>
 					<div class="col-md-6 text-start text-md-end">
-						<a href="#" class="more">View All Posts</a>
+						<a href="#" class="more">Bloglarımıza Göz Atın</a>
 					</div>
 				</div>
 
