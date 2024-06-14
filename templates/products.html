@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Ürünler{% endblock title %}
+
+{% block body %}
+
+    <body>
+		<div class="untree_co-section product-section before-footer-section">
+		    <div class="container">
+		      	<div class="row">
+				{% for product in Products %}
+					<div class="col-12 col-md-4 col-lg-3 mb-5">
+						<a class="product-item" href="{% url 'product' product.slug %}">
+							<img src="{{product.image.url}}" class="img-fluid product-thumbnail">
+							<h3 class="product-title">{{product.name}}</h3>
+							<strong class="product-price">{{product.price}} TL</strong>
+							<span class="icon-cross">
+								<img src="{% static 'img/cross.svg' %}" class="img-fluid">
+							</span>
+						</a>
+					</div>
+				{% endfor %}
+		      	</div>
+		    </div>
+		</div>
+	</body>
+
+{% endblock body %}

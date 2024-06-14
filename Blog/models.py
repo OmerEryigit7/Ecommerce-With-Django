@@ -8,7 +8,7 @@ class BlogModel(models.Model):
     image = models.ImageField(upload_to="C:/Users/kayra/ecommerce/static/img")
     slug = models.SlugField(null=False,blank=True,unique=True,db_index=True)
 
-    def str(self):
+    def __str__(self):
         return f"{self.name}"
     
     def save(self,*args,**kwargs):

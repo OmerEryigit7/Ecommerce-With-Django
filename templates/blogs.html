@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}Bloglar{% endblock title %}
+
+{% block body %}
+
+    <body>
+        <div class="blog-section">
+			<div class="container">
+				<div class="row">
+                {% for blog in blogs %}
+                    <div class="col-12 col-sm-6 col-md-4 mb-5">
+						<div class="post-entry">
+							<a href="{% url 'blog' blog.slug %}" class="post-thumbnail"><img src="{{blog.image.url}}" alt="Image" class="img-fluid"></a>
+							<div class="post-content-entry">
+								<h3><a href="{% url 'blog' blog.slug %}">{{blog.name}}</a></h3>
+								<div class="meta">
+									<span>by <a href="https://github.com/MustafaKayra">MustafaKayra</a></span> <span>on <a href="#">{{blog.date}}</a></span>
+								</div>
+							</div>
+						</div>
+					</div>
+                {% endfor %}
+				</div>
+			</div>
+		</div>
+	</body>
+
+{% endblock body %}
