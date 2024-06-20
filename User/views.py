@@ -1,29 +1,30 @@
-from django.shortcuts import render,redirect
+from django.shortcuts import render, redirect
 from .forms import UserForm
 from django.contrib.auth.models import User
-from django.contrib.auth import login,authenticate,logout
+from django.contrib.auth import login
 from django.contrib.auth.hashers import make_password
 from django.contrib import messages
 
 def createuser(request):
-    form = UserForm(request.POST)
-    context = {
-        "form":form
-    }
-    if form.is_valid():
-        username = form.cleaned_data.get("username")
-        password1 = form.cleaned_data.get("password1")
-        first_name = form.cleaned_data.get("first_name")
-        last_name = form.cleaned_data.get("last_name")
+    if request.method == 'POST':
+        form = UserForm(request.POST)
+        if form.is_valid():
+            password1 = form.cleaned_data.get("password1")
+            first_name = form.cleaned_data.get("first_name")
+            last_name = form.cleaned_data.get("last_name")
+            email = form.cleaned_data.get("email")
 
-        hashed_password = make_password(password1)
-        newUser = User.objects.create(username=username,password=password1,first_name=first_name,last_name=last_name)
-        newUser.save()
+            hashed_password = make_password(password1)
+            newUser = User.objects.create(password=hashed_password, first_name=first_name, last_name=last_name, email=email)
+            newUser.save()
 
-        login(request,newUser)
+            login(request, newUser)
 
-        messages.success(request,'Başarıyla Kayıt Olundu Ve Giriş Yapıldı')
-        return redirect('index')
+            messages.success(request, 'Başarıyla Kayıt Olundu Ve Giriş Yapıldı')
+            return redirect('index')
+        else:
+            messages.warning(request, form.errors)
+            print(form.errors)
     else:
-        messages.warning(request,"Formu Doldururken Bir Hata Yaptınız, Lütfen Tekrar Deneyin.")
-    return render(request,"createuser.html",context)
+        form = UserForm()
+    return render(request, "createuser.html", {"form": form})
