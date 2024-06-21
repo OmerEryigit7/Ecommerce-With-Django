@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from .forms import UserForm,LoginUserForm,UpdateUserForm
+from .forms import UserForm,LoginUserForm
 from django.contrib.auth.models import User
 from django.contrib.auth import login,authenticate,logout
 from django.contrib.auth.hashers import make_password
