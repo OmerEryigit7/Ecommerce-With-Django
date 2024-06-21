@@ -7,6 +7,26 @@
 {% block body %}
 
     <body>
+		{% if request.user.is_authenticated %}
+			<div class="hero">
+				<div class="container">
+					<div class="row justify-content-between">
+						<div class="col-lg-5">
+							<div class="intro-excerpt">
+								<h1>HOŞGELDİNİZ <span clsas="d-block">{{request.user.first_name}}</span></h1>
+								<p class="lead fw-normal text-white-50 mb-4">Türkiye'nin En Hızlı Ve Yenilikçi Mobilya Tedarikcisi.</p>
+								<p><a href="" class="btn btn-secondary me-2">Alışveriş</a><a href="{% url 'about' %}" class="btn btn-white-outline">Hakkımızda</a></p>
+							</div>
+						</div>
+						<div class="col-lg-7">
+							<div class="hero-img-wrap">
+								<img src="static/img/couch.png" class="img-fluid">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		{% else %}
 			<div class="hero">
 				<div class="container">
 					<div class="row justify-content-between">
@@ -25,6 +45,8 @@
 					</div>
 				</div>
 			</div>
+		{% endif %}
+			
 		<!-- End Hero Section -->
 
 		<!-- Start Product Section -->

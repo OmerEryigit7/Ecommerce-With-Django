@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}Kullanıcı Girişi{% endblock title %}
+
+{% block body %}
+
+<body>
+	<div class="untree_co-section">
+      <div class="container">
+        <div class="block">
+          <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-8 pb-4">
+              <form method="post">
+              {% csrf_token %}
+                <div class="form-group mb-5">
+                  <label class="text-black">Kullanıcı Adı</label>
+                  <input class="form-control" name="username">
+                </div>
+                <div class="form-group mb-5">
+                  <label class="text-black">Parola</label>
+                  <input type="password" class="form-control" name="password1" autocomplete="new-password">
+                </div>
+                <div class="form-group mb-5">
+                  <label class="text-black">Parolayı Doğrula</label>
+                  <input type="password" class="form-control" name="password2" autocomplete="new-password">
+                </div>    
+                <button type="submit" class="btn btn-primary">Kullanıcı Oluştur</button>
+              </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+</body>
+
+{% endblock body %}

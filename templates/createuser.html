@@ -16,25 +16,37 @@
                   <div class="col-6">
                     <div class="form-group">
                       <label class="text-black" for="fname">İsim</label>
-                      <input type="text" class="form-control" name="firstname">
+                      <input type="text" class="form-control" name="first_name">
                     </div>
                   </div>
                   <div class="col-6">
                     <div class="form-group">
                       <label class="text-black" for="lname">Soy İsim</label>
-                      <input type="text" class="form-control" name="lastname">
+                      <input type="text" class="form-control" name="last_name">
                     </div>
                   </div>
-                </div>
-                <div class="form-group">
-                  <label class="text-black">E-mail</label>
-                  <input type="email "class="form-control" name="email">
+                  <div class="col-6">
+                    <div class="form-group">
+                      <label class="text-black" for="lname">E-mail</label>
+                      <input type="text" class="form-control" name="email">
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="form-group">
+                      <label class="text-black" for="lname">Kullanıcı Adı</label>
+                      <input type="text" class="form-control" name="username">
+                    </div>
+                  </div>
                 </div>
                 <div class="form-group mb-5">
                   <label class="text-black">Parola</label>
                   <input type="password" class="form-control" name="password1" autocomplete="new-password">
                 </div>
-                <button type="submit" class="btn btn-primary">Kullanıcı Oluştur</button>
+                <div class="form-group mb-5">
+                  <label class="text-black">Parolayı Doğrula</label>
+                  <input type="password" class="form-control" name="password2" autocomplete="new-password">
+                </div>             
+                <button type="submit" class="btn btn-primary">Kullanıcı Oluştur</button><a href="{% url 'loginuser' %}"><p>Giriş Yapın</p></a><a href="{% url 'logout' %}"><p>Çıkış Yapın</p></a>
               </div>
               </form>
             </div>
