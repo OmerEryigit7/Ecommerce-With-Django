@@ -16,3 +16,4 @@ Projeyi kendi yerel bilgisayarınızda çalıştırmak için "git clone https://
 <img src="https://github.com/MustafaKayra/Ecommerce-With-Django/blob/main/static/img/MKT-COM%20_%20Anasayfa%20-%20Google%20Chrome%2015.06.2024%2000_11_38.png" alt="Resim1" width="800">
 <img src="https://github.com/MustafaKayra/Ecommerce-With-Django/blob/main/static/img/MKT-COM%20_%20Anasayfa%20-%20Google%20Chrome%2015.06.2024%2000_11_49.png" alt="Resim1" width="800">
 
+Salam saga Kayra
